@@ -1,0 +1,26 @@
+# How to Get Your Own API Key from OpenWeatherMap
+
+Follow these steps to get your own API key (APPID) from OpenWeatherMap:
+
+1. Go to the OpenWeatherMap website.
+2. Click on the 'Sign Up' button on the top right corner of the page.
+3. Fill in your details and click on 'Create Account'.
+4. After you've created your account, go to the 'API Keys' tab.
+5. You'll see a default API key there. You can use that, or create a new one by entering a name for the key and clicking on 'Generate'.
+6. Your API key will be generated. It might take up to 10 minutes for the key to become active.
+
+Now that you have your own API key, you can use it in your projects!
+
+## Contributing to Weather App Project
+
+If you want to contribute to the Weather App project, here's how you can do it:
+
+1. Fork the project repository.
+2. Clone the repository to your local machine.
+3. Create a new branch for your changes.
+4. Replace `'your_api_key'` in the JavaScript code with your actual OpenWeatherMap API key.
+5. Make your changes in the code.
+6. Commit and push your changes.
+7. Create a pull request detailing the changes you made.
+
+I appreciate your contributions!

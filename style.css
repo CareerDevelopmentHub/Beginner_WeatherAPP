@@ -1,0 +1,30 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 30px;
+}
+#weather {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+}
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+}
+button {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #333;
+    color: #fff;
+}
+button:hover {
+    background: #444;
+}
