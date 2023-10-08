@@ -10,16 +10,26 @@ function getWeather() {
       var temp = Math.round(data.main.temp - 273.15);
       var humidity = data.main.humidity;
       var windSpeed = data.wind.speed;
-      document.getElementById("showWeather").innerHTML =
-        "Temperature in " +
-        city +
-        " is " +
+      var iconurl = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+      var m=data.weather[0].main;
+
+      var image = document.createElement("img");
+      image.setAttribute("id", "wicon");
+      image.setAttribute("src", iconurl);
+      image.setAttribute("alt", "Weather icon");
+      var showWeather = document.getElementById("showWeather");
+      var showCountry = document.getElementById("showCountry");
+      showCountry.innerHTML=city+"<br>"; 
+      showCountry.appendChild(image);
+
+      showWeather.innerHTML =
+        m+"<br>"+
         temp +
-        "°C, Humidity is " +
+        "°C<br> Humidity is " +
         humidity +
-        "%, Wind Speed is " +
+        "% <br>Wind Speed is " +
         windSpeed +
-        " m/s";
+        " m/s <br>";
     })
     .catch((err) => alert("City not found"));
 }

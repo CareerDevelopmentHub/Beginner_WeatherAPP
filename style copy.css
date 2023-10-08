@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mooli&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  font-family: "Mooli", sans-serif;
+}
+body {
+    background-image: url("bg.jfif");
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+    padding: 30px;
+}
+#weather {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+}
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    outline: none;
+}
+button {
+    width: 70%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+button:hover {
+    background: #444;
+    transform:scale(1.1);
+}
+#showCountry{
+    margin-bottom: 0;
+}
+#showWeather{
+    margin-top: 0%;
+    line-height: 25px;
+}
+p{
+    letter-spacing: 0.5px;
+    word-spacing: 3px;
+}
