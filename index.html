@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="weather">
-        <h2>Weather in your city</h2>
-        <input type="text" id="city" placeholder="Enter city">
-        <button onclick="getWeather()">Get Weather</button>
-        <h1 id="showCountry"></h1>
-        <p id="showWeather"></p>
-    </div>
-    <script src="script.js"></script>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Weather App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+        <h1>Weather App</h1>
+        <div class="search">
+            <input type="text" placeholder="Enter location">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <div class="weather-info">
+        <div class="location">
+            <h2>New York, NY</h2>
+        </div>
+        <div class="current-weather">
+            <div class="temperature">
+                <h3>Temperature</h3>
+                <p>75°F</p>
+            </div>
+            <div class="condition">
+                <h3>Condition</h3>
+                <p>Sunny</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

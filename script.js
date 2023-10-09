@@ -1,35 +1,53 @@
-function getWeather() {
-  var city = document.getElementById("city").value;
-  fetch(
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
-      city +
-      "&appid=your_api_key"
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      var temp = Math.round(data.main.temp - 273.15);
-      var humidity = data.main.humidity;
-      var windSpeed = data.wind.speed;
-      var iconurl = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
-      var m=data.weather[0].main;
+    // Function to fetch weather data from the API
+    function fetchWeatherData(city) {
+      const apiKey = '90cd13c6c777169fe48456c291385bd5'; 
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
-      var image = document.createElement("img");
-      image.setAttribute("id", "wicon");
-      image.setAttribute("src", iconurl);
-      image.setAttribute("alt", "Weather icon");
-      var showWeather = document.getElementById("showWeather");
-      var showCountry = document.getElementById("showCountry");
-      showCountry.innerHTML=city+"<br>"; 
-      showCountry.appendChild(image);
+      fetch(apiUrl)
+          .then((response) => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.json();
+          })
+          .then((data) => {
+              // Update the UI with weather data
+              updateWeatherUI(data);
+          })
+          .catch((error) => {
+              console.error('Error fetching weather data:', error);
+              alert('Error fetching weather data. Please try again.');
+          });
+  }
 
-      showWeather.innerHTML =
-        m+"<br>"+
-        temp +
-        "°C<br> Humidity is " +
-        humidity +
-        "% <br>Wind Speed is " +
-        windSpeed +
-        " m/s <br>";
-    })
-    .catch((err) => alert("City not found"));
-}
+  // Function to update the UI with weather data
+  function updateWeatherUI(data) {
+      const locationElement = document.querySelector('.location h2');
+      const temperatureElement = document.querySelector('.temperature p');
+      const conditionElement = document.querySelector('.condition p');
+
+      locationElement.textContent = `${data.name}, ${data.sys.country}`;
+      temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
+      conditionElement.textContent = data.weather[0].description;
+
+    
+  }
+
+  // Function to handle the form submission
+  function handleFormSubmit(event) {
+      event.preventDefault();
+      const cityInput = document.querySelector('.search input');
+      const cityName = cityInput.value.trim();
+
+      if (cityName) {
+          fetchWeatherData(cityName);
+          cityInput.value = ''; // Clear the input field
+      } else {
+          alert('Please enter a valid city name.');
+      }
+  }
+
+  // Attach the form submission handler to the search button
+  const searchButton = document.querySelector('.search button');
+  searchButton.addEventListener('click', handleFormSubmit);
+
