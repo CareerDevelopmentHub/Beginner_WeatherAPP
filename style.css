@@ -137,9 +137,11 @@ body {
       padding-right: 20px;
       padding-bottom: 15px;
     }
-    .container{
-      margin: 45% auto;
-    }
+    .container {
+        margin-top: 50%;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
   }
   
   /* For screens between 600px and 1024px (e.g., tablets) */
