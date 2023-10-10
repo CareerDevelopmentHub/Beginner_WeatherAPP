@@ -1,50 +1,159 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mooli&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
-* {
-  font-family: "Mooli", sans-serif;
-}
+
 body {
-    background-image: url("bg.jfif");
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    color: #333;
-    text-align: center;
-    padding: 30px;
-}
-#weather {
-    background: #fff;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 500px;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.1);
-    border-radius: 15px;
-}
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    outline: none;
-}
-button {
-    width: 70%;
-    padding: 10px;
-    margin-top: 15px;
-    background: #333;
-    color: #fff;
-    border: none;
+    background-color: #4C7A9E; /* Background color */
+    font-family: "Mooli", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white; /* Text color */
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.9); /* Background with transparency */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-}
-button:hover {
-    background: #444;
-    transform:scale(1.1);
-}
-#showCountry{
-    margin-bottom: 0;
-}
-#showWeather{
-    margin-top: 0%;
-    line-height: 25px;
-}
-p{
-    letter-spacing: 0.5px;
-    word-spacing: 3px;
-}
+    margin: 15% auto;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    color: #333;
+  }
+  
+  .location h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .location p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .weather-info {
+    margin-top: 20px;
+  }
+  
+  .current-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .temperature,
+  .condition {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .temperature h3,
+  .condition h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .temperature p,
+  .condition p {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  
+  .forecast-day {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Background with transparency */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .forecast-day p:first-child {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .forecast-day p:last-child {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  /* Add styling for the search input and button */
+  .search {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search input {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .search button {
+    background-color: #4C7A9E;
+    /* Button background color */
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    /* Button text color */
+  }
+  
+  .search button:hover {
+    background-color: #34628E;
+    /* Button background color on hover */
+  }
+  
+  /* For screens smaller than 600px (e.g., smartphones) */
+  @media (max-width: 600px) {
+    .search {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .search input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .search button {
+      background-color: #4C7A9E;
+      border: none;
+      border-radius: 5px 5px 5px 5px;
+      cursor: pointer;
+      color: white;
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 15px;
+    }
+    .container {
+        margin-top: 50%;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+  }
+  
+  /* For screens between 600px and 1024px (e.g., tablets) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* For screens larger than 1024px (e.g., desktops) */
+  @media (min-width: 1025px) {
+    .container {
+      max-width: 1000px;
+    }
+  }
