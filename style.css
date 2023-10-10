@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mooli&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 body {
-    background-color: #4C7A9E; /* Background color */
+    background-image: linear-gradient(#EBEBEB,#4062BB); /* Background color */
     font-family: "Mooli", sans-serif;
     margin: 0;
     padding: 0;
@@ -9,17 +9,19 @@ body {
   }
   
   .container {
-    background-color: rgba(255, 255, 255, 0.9); /* Background with transparency */
+    background-color: rgba(251, 252, 255, 0.9); /* Background with transparency */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin: 15% auto;
+    margin: 10% auto;
     max-width: 400px;
     padding: 20px;
     text-align: center;
   }
   
   .header h1 {
-    color: #333;
+    color: #4c41a3;
+    margin-bottom: 3px;
+    font-weight: 2000;
   }
   
   .location h2 {
@@ -100,7 +102,7 @@ body {
   }
   
   .search button {
-    background-color: #4C7A9E;
+    background-color: #325169;
     /* Button background color */
     border: none;
     border-radius: 0 5px 5px 0;
@@ -111,7 +113,7 @@ body {
   }
   
   .search button:hover {
-    background-color: #34628E;
+    background-color: #8abae7;
     /* Button background color on hover */
   }
   
