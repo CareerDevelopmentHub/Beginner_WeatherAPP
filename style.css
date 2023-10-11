@@ -1,161 +1,111 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mooli&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
 
 body {
-    background-image: linear-gradient(#EBEBEB,#4062BB); /* Background color */
-    font-family: "Mooli", sans-serif;
-    margin: 0;
-    padding: 0;
-    color: white; /* Text color */
-  }
+  background: ;
+}
+
+.card {
+  width: 90%;
+  max-width: 470px;
+  background: linear-gradient(135deg, #347e8f, #ae4299);
+  color: #fff;
+  margin: 100px auto 0;
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+  text-shadow: #322d52;
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input {
+  border: 0;
+  outline: none;
+  background: #ebfffc;
+  color: #555;
+  padding: 10px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+}
+
+.search button {
+  border: 0;
+  outline: none;
+  background: #ebfffc;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.search button img {
+  width: 16px;
+}
+
+.weather-icon {
+  width: 170px;
+  margin-top: 30px;
+}
+
+.weather h1 {
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.weather h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.col img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.humidity, .wind {
+  font-size: 30px;
+}
+
+.weather {
+  display: none;
+}
+
+.error {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 30px;
+  margin-top: 10px;
+  display: none;
+}
+
+@media screen(max-width: 600px) {
   
-  .container {
-    background-color: rgba(251, 252, 255, 0.9); /* Background with transparency */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 10% auto;
-    max-width: 400px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .header h1 {
-    color: #4c41a3;
-    margin-bottom: 3px;
-    font-weight: 2000;
-  }
-  
-  .location h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .location p {
-    font-size: 16px;
-    color: #777;
-  }
-  
-  .weather-info {
-    margin-top: 20px;
-  }
-  
-  .current-weather {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .temperature,
-  .condition {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .temperature h3,
-  .condition h3 {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .temperature p,
-  .condition p {
-    font-size: 24px;
-    color: #333;
-  }
-  
-  
-  .forecast-day {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Background with transparency */
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .forecast-day p:first-child {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  .forecast-day p:last-child {
-    font-size: 20px;
-    color: #333;
-  }
-  
-  /* Add styling for the search input and button */
-  .search {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .search input {
-    padding: 10px;
-    width: 70%;
-    border: none;
-    border-radius: 5px 0 0 5px;
-  }
-  
-  .search button {
-    background-color: #325169;
-    /* Button background color */
-    border: none;
-    border-radius: 0 5px 5px 0;
-    padding: 10px 15px;
-    cursor: pointer;
-    color: white;
-    /* Button text color */
-  }
-  
-  .search button:hover {
-    background-color: #8abae7;
-    /* Button background color on hover */
-  }
-  
-  /* For screens smaller than 600px (e.g., smartphones) */
-  @media (max-width: 600px) {
-    .search {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .search input {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-    .search button {
-      background-color: #4C7A9E;
-      border: none;
-      border-radius: 5px 5px 5px 5px;
-      cursor: pointer;
-      color: white;
-      padding-top: 15px;
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 15px;
-    }
-    .container {
-        margin-top: 50%;
-        margin-left: 8px;
-        margin-right: 8px;
-      }
-  }
-  
-  /* For screens between 600px and 1024px (e.g., tablets) */
-  @media (min-width: 601px) and (max-width: 1024px) {
-    .container {
-      max-width: 80%;
-    }
-  }
-  
-  /* For screens larger than 1024px (e.g., desktops) */
-  @media (min-width: 1025px) {
-    .container {
-      max-width: 1000px;
-    }
-  }
+}
