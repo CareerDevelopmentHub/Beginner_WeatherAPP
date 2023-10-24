@@ -5,7 +5,7 @@ body {
     font-family: "Mooli", sans-serif;
     margin: 0;
     padding: 0;
-    color: white; /* Text color */
+    color: rgb(182, 177, 177); /* Text color */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -31,9 +31,7 @@ body {
 
 
   .container {
-    background-color: rgba(251, 252, 255, 0.9); /* Background with transparency */
-    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+<<
     padding: 20px;
     text-align: center;
     position: relative;
@@ -66,33 +64,37 @@ body {
   }
   
   .weather-info {
-    margin-top: 20px;
+    margin-top: 10px;
   }
-  
+  .current-weather-img{
+    width:30%;
+  }
   .current-weather {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    align-items: right;
+    margin-top: 5px;
   }
-  
   .temperature,
-  .condition {
+  .condition,
+  .humidity {
     flex: 1;
     padding: 20px;
+    
   }
-  
   .temperature h3,
-  .condition h3 {
+  .condition h3 ,
+  .humidity h3{
     font-size: 18px;
     color: #333;
   }
-  
   .temperature p,
-  .condition p {
+  .condition p,
+  .humidity p{
     font-size: 24px;
     color: #333;
   }
+  
   
   
   .forecast-day {
@@ -148,6 +150,9 @@ body {
     background-color:#325169;
     /* Button background color on hover */
   }
+ 
+
+  
   
 
 
