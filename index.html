@@ -10,26 +10,112 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
   <title>Weather App</title>
+  <style>
+    h3{
+      color: aliceblue !important; 
+    }
+    p{
+      color: aliceblue !important; 
+    }
+    h2{
+      color: aliceblue !important; 
+    }
+    h1{
+      color: aliceblue !important; 
+    }
+    :root{
+--bg:linear-gradient(to top right, #363690 41%, #3ec7f5 100%);
+
+--bg-input: #e1e1ed;
+}
+
+
+/* light mode edited */
+
+.light-mode {
+--bg: linear-gradient(to left, #2a2d30, #080a0c);
+--bg-input: #fcf9f9;
+}
+
+body {
+background: var(--bg);
+color: var(--color-text);
+/*font-weight: 500;
+display: flex;*/
+}
+
+.switch {
+position: absolute;
+margin-left: -9999px;
+visibility: hidden;
+}
+
+.switch+label {
+display: block;
+position: relative;
+cursor: pointer;
+outline: none;
+user-select: none;
+}
+
+.switch+label {
+padding: 2px;
+width: 52px;
+height: 27px;
+background-color: var(--color-border), rgba(23, 21, 21, 0.3);
+border-radius: 100px;
+}
+
+.switch+label:before,
+.switch+label:after {
+display: block;
+position: absolute;
+top: 1px;
+left: 1px;
+bottom: 1px;
+content: "";
+}
+
+.switch+label:before {
+right: 1px;
+background-color: var(--bg-input);
+border-radius: 60px;
+transition: all 0.4s;
+}
+
+.switch+label:after {
+width: 30px;
+background-color: #fff;
+border-radius: 100%;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+transition: all 0.4s;
+}
+
+.switch:checked+label:before {
+background-color: #f3eff5;
+}
+
+.switch:checked+label:after {
+transform: translateX(30px);
+}
+  </style>
 </head>
 <body>
-  <button class="dark-button" onclick="darkfuncation()"><i class="fa-solid fa-moon" style="color: #e61919;"></i></button>
-  <!-- java script -->
-  <script>
-    function darkfuncation(){
-      let element=document.body;
-      element.classList.toggle("dark-mode");
-    }
-  </script>
   <div class="container">
+    
     <div class="header">
         <h1>Weather App</h1>
+        
         <div class="search">
             <input type="text" placeholder="Enter a location name">
             <button><i class="fas fa-search"></i></button>
         </div>
+        
     </div>
     <div class="weather-info">
+      
         <div class="location">
+          
             <h2> Write current City Name</h2>
             <input type="text"  placeholder="e.g - odisha, delhi ,mumbai">
             <button class="search-btn">search</button>
@@ -58,11 +144,24 @@
               
             </ul>
           </div>
-          
         </div>
     </div>
+    
 </div>
+<label for="switch">
+  <input type="checkbox" id="switch" class="switch">
+  <label for="switch"></label>
+</label>
 
+<script>
+const $html = document.querySelector("html");
+const $checkbox = document.querySelector("#switch");
+
+$checkbox.addEventListener("change", function() {
+$html.classList.toggle("light-mode");
+});
+</script>
+<h2 style="padding: 20px;"> Dark Mode</h2>
   <script src="script.js"></script>
 </body>
 
