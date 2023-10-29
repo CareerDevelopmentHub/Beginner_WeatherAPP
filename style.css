@@ -16,8 +16,6 @@ body {
   .dark-mode{
     background-image: radial-gradient(circle at center center, transparent 0%,rgb(0,0,0) 85%),linear-gradient(78deg, rgba(192, 192, 192,0.05) 0%, rgba(192, 192, 192,0.05) 50%,rgba(60, 60, 60,0.05) 50%, rgba(60, 60, 60,0.05) 100%),linear-gradient(227deg, rgba(97, 97, 97,0.05) 0%, rgba(97, 97, 97,0.05) 50%,rgba(52, 52, 52,0.05) 50%, rgba(52, 52, 52,0.05) 100%),linear-gradient(240deg, rgba(98, 98, 98,0.05) 0%, rgba(98, 98, 98,0.05) 50%,rgba(249, 249, 249,0.05) 50%, rgba(249, 249, 249,0.05) 100%),linear-gradient(187deg, rgba(1, 1, 1,0.05) 0%, rgba(1, 1, 1,0.05) 50%,rgba(202, 202, 202,0.05) 50%, rgba(202, 202, 202,0.05) 100%),linear-gradient(101deg, rgba(61, 61, 61,0.05) 0%, rgba(61, 61, 61,0.05) 50%,rgba(254, 254, 254,0.05) 50%, rgba(254, 254, 254,0.05) 100%),linear-gradient(176deg, rgba(237, 237, 237,0.05) 0%, rgba(237, 237, 237,0.05) 50%,rgba(147, 147, 147,0.05) 50%, rgba(147, 147, 147,0.05) 100%),linear-gradient(304deg, rgba(183, 183, 183,0.05) 0%, rgba(183, 183, 183,0.05) 50%,rgba(57, 57, 57,0.05) 50%, rgba(57, 57, 57,0.05) 100%),radial-gradient(circle at center center, hsl(351,4%,12%),hsl(351,4%,12%));
     color:wheat;
-    
-    
   }
   .dark-button{
     cursor: pointer;
@@ -31,23 +29,23 @@ body {
 
 
   .container {
-    background-color: rgba(251, 252, 255, 0.9); /* Background with transparency */
+    background-color: rgba(251, 252, 255, 0.8); /* Background with transparency */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     position: relative;
     right:60px;
+    transform: scale(1.5);
   }
   
   .header h1 {
     font-size: 5vh;
     font-weight: bold;
-    color: #0077FF; 
-   letter-spacing: 2px; 
+    color: rgb(31, 116, 212); 
+    letter-spacing: 2px; 
     text-align: center; 
-    
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   }
   
   .location h2 {
@@ -131,7 +129,7 @@ body {
   .search button {
     background-color: #4d9eea ;
     /* Button background color */
-    border: none;
+    border: 1px solid lightblue;
     border-radius: 0 5px 5px 0;
     padding: 10px 15px;
     cursor: pointer;
@@ -140,7 +138,7 @@ body {
   }
   
   .search button:hover {
-    background-color:#325169;
+    background-color:#e7edf0;
     /* Button background color on hover */
   }
   
