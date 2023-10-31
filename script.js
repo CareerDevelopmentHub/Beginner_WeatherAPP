@@ -51,3 +51,17 @@
   const searchButton = document.querySelector('.search button');
   searchButton.addEventListener('click', handleFormSubmit);
 
+
+ // Function for Date and Time
+
+ 
+        function updateTime() {
+            const currentDateTime = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+            const formattedDateTime = currentDateTime.toLocaleDateString('en-US', options);
+            document.getElementById('currentDateTime').textContent = formattedDateTime;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+
